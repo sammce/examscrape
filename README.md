@@ -9,9 +9,9 @@ cd examscrape
 Install dependencies using:
 ```sh
 pnpm install
-// or
+# or
 yarn install
-// or
+# or
 npm install
 ```
 
@@ -20,9 +20,9 @@ npm install
 To run the scraper, use:
 ```sh
 pnpm main
-// or 
+# or 
 yarn main
-// or
+# or
 npm run main
 ```
 This will compile the TypeScript file to JavaScript and run it.
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 Then run:
 ```sh
 python rearrange.py
-// Or on UNIX systems
+# Or on UNIX systems
 python3 rearrange.py
 ```
 
