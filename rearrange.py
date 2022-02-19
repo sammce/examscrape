@@ -1,8 +1,16 @@
 import pandas as pd
+from samutil.formatting import Formatter as fmt
 
 
 def rearrange(db_filename: str):
-    DB = pd.read_json(db_filename)
+    try:
+        DB = pd.read_json(db_filename)
+    except FileNotFoundError:
+        print(
+            fmt.error(
+                f"The JSON file {db_filename} doesn't exist. Did you forget to run the scraper?"
+            )
+        )
 
     df = pd.DataFrame(DB)
 
@@ -40,3 +48,7 @@ def rearrange(db_filename: str):
     ideal_df = pd.DataFrame(columns=columns, data=rows)
 
     ideal_df.to_csv("ideal_db.csv")
+
+
+if __name__ == "__main__":
+    rearrange("db.json")

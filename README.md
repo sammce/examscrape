@@ -27,3 +27,18 @@ npm run main
 ```
 This will compile the TypeScript file to JavaScript and run it.
 It may take a while for the scraper to finish, as there is an artificial delay between each dropdown selection to avoid issuing too many requests, resulting in a 429 HTTP error.
+
+The format the resulting data (located in `db.json`) is in is unsuitable for the site, so a Python script is used to rearrange it.
+
+To setup the Python environment, preferably in a venv, use:
+```sh
+pip install -r requirements.txt
+```
+
+Then run:
+```sh
+python rearrange.py
+// Or on UNIX systems
+python3 rearrange.py
+```
+
