@@ -42,3 +42,6 @@ python rearrange.py
 python3 rearrange.py
 ```
 
+This will only work if `db.json` is present in the current working directory.
+
+The resulting CSV file (`ideal_db.csv`) is what will be used in the finished site.
